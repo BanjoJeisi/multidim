@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <p>
+      <?php
+      // On the line below, create your own associative array:
+        $myArray = array(
+            "famiglia" => array(
+                    "Leo" => 37,
+                    "Jsi" => 34,
+                    "Fra" => 3,
+                    "Adele" => 1),
+            
+            "pets" => array(
+                    "Mucca" => 10,
+                    "Gilda" => 11,
+                    "uno" => array(
+                                "tom"=> 90,
+                                "jerry"=> 93
+                                )
+                    )
+            
+            );
+            
+
+      // On the line below, output one of the values to the page:
+                    
+            echo $myArray["pets"]["uno"]["tom"] . "<br />";
+       
+        
+          
+      // On the line below, loop through the array and output
+      // *all* of the values to the page:
+         
+         
+         foreach($myArray as $arrayName=>$value){
+             echo "<h1>" . $arrayName . $value . "</h1>". "<br />";
+             
+             foreach($value as $chiave=>$valore){
+                 echo $chiave . ": " . $valore . "<br />";
+                     
+                        foreach($valore as $k=>$v){
+                            echo $k . $v;
+                     
+                        }
+                 
+             }
+             
+         }
+     
+      ?>
+    </p>
+  </body>
+</html>
